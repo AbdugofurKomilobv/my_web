@@ -3,76 +3,76 @@
 
 <section id="resume" class="resume section">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Resume</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-    </div><!-- End Section Title -->
+  <!-- Bo‘lim sarlavhasi -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>{% trans "Resume" %}</h2>
+    <p>{% trans "Bu yerda mening ta'limim va ish tajribam haqida qisqacha ma'lumotlar keltirilgan." %}</p>
+  </div>
 
-    <div class="container">
+  <div class="container">
+    <div class="row">
 
-      <div class="row">
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title">Sumary</h3>
-
-          <div class="resume-item pb-0">
-            <h4>Brandon Johnson</h4>
-            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-            <ul>
-              <li>Portland par 127,Orlando, FL</li>
-              <li>(123) 456-7891</li>
-              <li>alice.barkley@example.com</li>
-            </ul>
-          </div><!-- Edn Resume Item -->
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>Master of Fine Arts &amp; Graphic Design</h4>
-            <h5>2015 - 2016</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-          </div><!-- Edn Resume Item -->
-
-          <div class="resume-item">
-            <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-            <h5>2010 - 2014</h5>
-            <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-            <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-          </div><!-- Edn Resume Item -->
-
+      <!-- Chap ustun: Summary va Education -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">{% trans "Summary" %}</h3>
+        <div class="resume-item pb-0">
+          <h4>Komilov Abdugofur</h4>
+          <p><em>{% trans "Experienced and innovative backend developer with experience in working with Django and REST APIs, microservices architecture, and building backend systems for data analytics." %}</em></p>
+          <ul>
+            <li>Tashkent,Fergana,Kokand </li>
+            <li>+998 77 099 15 04</li>
+            <li>komilovabdugofur635@gmail.com</li>
+          </ul>
         </div>
 
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Senior graphic design specialist</h4>
-            <h5>2019 - Present</h5>
-            <p><em>Experion, New York, NY </em></p>
-            <ul>
-              <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-              <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-              <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-            </ul>
-          </div><!-- Edn Resume Item -->
+        <h3 class="resume-title">{% trans "Education" %}</h3>
+        <div class="resume-item">
+          <h4>{% trans "Kokand: Vali-teach" %}</h4>
+          <h5>2021 - 2022</h5>
+          <p><em>{% trans "Full Stack " %}</em></p>
+         
+        </div>
+        <div class="resume-item">
+            <h4>{% trans "Tashkent: Najot Ta'lim" %}</h4>
+            <h5>2024 - 2025</h5>
+            <p><em>{% trans "Backend Python Django" %}</em></p>
 
+          </div>
           <div class="resume-item">
-            <h4>Graphic design specialist</h4>
-            <h5>2017 - 2018</h5>
-            <p><em>Stepping Stone Advertising, New York, NY</em></p>
-            <ul>
-              <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-              <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-              <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-              <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-            </ul>
-          </div><!-- Edn Resume Item -->
+            <h4>{% trans "Tashkent: Mohir dev" %}</h4>
+            <h5>2024 - 2025</h5>
+            <p><em>{% trans "Cybersecurity: Pentesting (Online continues)" %}</em></p>
 
+          </div>
+      </div>
+
+      <!-- O‘ng ustun: Professional tajriba -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="resume-title">{% trans "Professional Experience" %}</h3>
+        <div class="resume-item">
+          <h4>{% trans "Backend Developer" %}</h4>
+          <h5>2025 - Hozirgi vaqtgacha</h5>
+          <ul>
+            <li>{% trans "Django RESTful APIs were developed and built with integration in mind." %}</li>
+            <li>{% trans "A data model working with PostgreSQL was designed and optimized." %}</li>
+            <li>{% trans "Integration with the frontend team via API was provided." %}</li>
+            <li>{% trans "JWT authentication, OTP login, and permissions based on user roles have been implemented." %}</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>{% trans "Junior Python Developer" %}</h4>
+          <h5>2021 - 2022</h5>
+          <p><em>{% trans "Freelance / Individual Projects" %}</em></p>
+          <ul>
+            <li>{% trans "Telegram botlar (aiogram) va avtomatlashtirilgan skriptlar yaratildi." %}</li>
+            <li>{% trans "SQL, SQLite3 va MySQL bilan ishlovchi kichik loyihalar qilindi." %}</li>
+            <li>{% trans "Python 3.12.3 asosida mustaqil loyihalar ishlab chiqildi." %}</li>
+          </ul>
         </div>
 
       </div>
-
     </div>
+  </div>
 
-  </section>
+</section>
