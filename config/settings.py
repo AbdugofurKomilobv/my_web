@@ -27,9 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+   
 
     # local apps
-    'main'
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -40,6 +41,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -100,6 +102,7 @@ LANGUAGES = [
     ('en', 'English'),
     ('uz', 'Uzbek'),
 ]
+USE_I18N = True
 LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
@@ -107,6 +110,7 @@ LOCALE_PATHS = [
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+USE_L10N = True  
 
 USE_TZ = True
 
@@ -118,6 +122,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

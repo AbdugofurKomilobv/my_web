@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from main.models import Portfolio
 
 def home(request):
-    return render(request, template_name='index.html')
+    portfolios = Portfolio.objects.all()
+    return render(request, template_name='index.html',context={'portfolios':portfolios})
+

@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from main.models import Portfolio
+
+
+@admin.register(Portfolio)
+class PortfolioAdmin(admin.ModelAdmin):
+    list_display = ('name', 'category', 'description', 'project_url','image')

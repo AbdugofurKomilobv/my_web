@@ -29,7 +29,11 @@
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
 
 
+
+    
+  
 </head>
+ 
 
 <body class="index-page">
 
@@ -37,13 +41,13 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="{% static 'assets/img/my-profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
+      <img src="{% static 'assets/img/kk1.jpg' %}" alt="" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="{% static 'assets/img/logo.png' %}" alt=""> -->
-      <h1 class="sitename">Alex Smith</h1>
+      <h1 class="sitename">Komilov Abdugofur</h1>
     </a>
 
     <div class="social-links text-center">
@@ -53,16 +57,36 @@
       <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
     </div>
-
     <nav id="navmenu" class="navmenu">
       <ul>
+        <li>
+          <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="uz">
+            <input type="hidden" name="next" value="{{ request.path }}">
+            <button type="submit" class = 'bu' style="background: none; border: none; color: inherit; cursor: pointer;" 
+                    {% if LANGUAGE_CODE == 'uz' %}class="active"{% endif %}>🇺🇿 UZ</button>
+          </form>
+          <form action="{% url 'set_language' %}" method="post" style="display: inline;">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="en">
+            <input type="hidden" name="next" value="{{ request.path }}">
+            <button class = 'bu' type="submit" style="background: none; border: none; color: inherit; cursor: pointer;"
+                    {% if LANGUAGE_CODE == 'en' %}class="active"{% endif %}>🇬🇧 EN</button>
+          </form>
+        </li>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+    
+        <!-- Til tanlash -->
       </ul>
     </nav>
+    
+    
+    
 
   </header>
 

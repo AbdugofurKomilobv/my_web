@@ -14,7 +14,7 @@
 
       <!-- Filtrlar -->
       <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-        <li data-filter="*" class="filter-active">{% trans "Barchasi" %}</li>
+        <li data-filter="*" class="filter-active">{% trans "All" %}</li>
         <li data-filter=".filter-app">{% trans "Django" %}</li>
         <li data-filter=".filter-product">{% trans "Django REST API" %}</li>
         <li data-filter=".filter-branding">{% trans "Telegram bot" %}</li>
@@ -24,19 +24,21 @@
       <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
         <!-- Loyiha 1 -->
-        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+         {% for port in portfolios %}
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ port.category }}">
           <div class="portfolio-content h-100">
-            <img src="{% static 'assets/img/portfolio/app-1.jpg' %}" class="img-fluid" alt="">
+            <img src="{{ port.image.url }}" class="img-fluid" alt="{{ port.name }}">
             <div class="portfolio-info">
-              <h4>{% trans "Online course management system via API" %}</h4>
-              <p>{% trans "It allows teachers and students to manage homework, attendance, and statistics via API." %}</p>
-              <a href="{% static 'assets/img/portfolio/app-1.jpg' %}" title="{% trans 'Django REST API Project' %}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="#" title="{% trans 'More' %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              <h4>{{ port.name }}</h4>
+              <p>{{ port.description }}</p>
+              <a href="{{ port.image.url }}" title="{{ port.name }}" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+               {% if port.project_url %}
+              <a href="{{ port.project_url }}" title="{% trans 'More' %}" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              {% endif %}
             </div>
           </div>
         </div>
-
-        <!-- Yana loyiha qo‘shmoqchi bo‘lsang, shu blokni ko‘paytirsang bo‘ladi -->
+        {% endfor %}
 
       </div>
     </div>
