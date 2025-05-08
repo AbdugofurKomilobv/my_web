@@ -1,6 +1,33 @@
 {% load static %}
 {% load i18n %}
+<style>
 
+.yeban button {
+    background-color: #5e72e4; /* Tugma foni */
+    color: #fff; /* Matn rangi */
+    border: none; /* Chegarasiz */
+    padding: 12px 30px; /* Yengil to'ldirish */
+    font-size: 16px; /* Matn o'lchami */
+    border-radius: 5px; /* Yumshatilgan burchaklar */
+    cursor: pointer; /* Ko'rsatgichni qo'yish */
+    transition: all 0.3s ease; /* Animatsiya */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soqmoq effekti */
+    text-transform: uppercase; /* Matnni kattalashtirish */
+    letter-spacing: 1px; /* Harflar orasidagi masofa */
+}
+
+.yeban button:hover {
+    background-color: #4e62d5; /* Hover holatidagi tugma rangi */
+    transform: translateY(-2px); /* Tugma ko'tariladi */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Ko'proq so'qlar */
+}
+
+.yeban button:focus {
+    outline: none; /* Fokus holatida konturni olib tashlash */
+    box-shadow: 0 0 0 2px #5e72e4; /* Fokus holatida ko'k kontur */
+}
+
+</style>
 <section id="contact" class="contact section">
 
   <!-- Section Title -->
@@ -48,7 +75,8 @@
       </div>
 
       <div class="col-lg-7">
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+        <form action="{% url 'home' %}" method="POST" class="yeban" data-aos="fade-up" data-aos-delay="200">
+           {% csrf_token %}
           <div class="row gy-4">
 
             <div class="col-md-6">
@@ -72,9 +100,9 @@
             </div>
 
             <div class="col-md-12 text-center">
-              <div class="loading">{% trans "Loading" %}</div>
-              <div class="error-message"></div>
-              <div class="sent-message">{% trans "Your message has been sent. Thank you!" %}</div>
+         
+           
+              
 
               <button type="submit">{% trans "Send Message" %}</button>
             </div>

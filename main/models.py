@@ -26,5 +26,5 @@ class ContactMe(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
-        return f"{self.name} - {self.subject}"
+        return f"{self.u_name} - {self.subject}"
 

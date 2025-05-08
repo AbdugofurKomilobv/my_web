@@ -1,0 +1,51 @@
+<!-- templates/message.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Xabar yuborildi</title>
+  <style>
+    body {
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .message-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .message-box h2 {
+      color: #16a34a;
+    }
+    .message-box p {
+      margin-top: 10px;
+    }
+    .message-box a {
+      display: inline-block;
+      margin-top: 20px;
+      background: #16a34a;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .message-box a:hover {
+      background: #15803d;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-box">
+    <h2>Your message has been sent successfully!</h2>
+    <p>We will contact you soon..</p>
+    <a href="{% url 'home' %}">Return to home page</a>
+  </div>
+</body>
+</html>
