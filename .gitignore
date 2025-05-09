@@ -1,18 +1,14 @@
-# Python cache fayllari
-__pycache__/
-*.py[cod]
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.db
+*.sqlite3
 
 # Virtual environment
 venv/
-env/
-
-# IDE fayllari
-.vscode/
-.idea/
-
-# OS fayllari
-.DS_Store
-Thumbs.db
-
-# .env fayl (maxfiy kalitlar)
 .env
+
+# IDE configurations
+.idea/
