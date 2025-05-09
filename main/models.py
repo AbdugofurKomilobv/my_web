@@ -21,6 +21,7 @@ class ContactMe(models.Model):
     u_name = models.CharField(max_length=50)
     email = models.EmailField()
     subject = models.CharField(max_length=50)
+    phone = models.CharField(max_length=20)
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
