@@ -1,0 +1,18 @@
+# Python cache fayllari
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+
+# IDE fayllari
+.vscode/
+.idea/
+
+# OS fayllari
+.DS_Store
+Thumbs.db
+
+# .env fayl (maxfiy kalitlar)
+.env
