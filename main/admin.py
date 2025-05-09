@@ -9,4 +9,4 @@ class PortfolioAdmin(admin.ModelAdmin):
 
 @admin.register(ContactMe)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('u_name','email','subject','message','created_at','updated_at')
+    list_display = ('u_name','email','subject','phone','message','created_at','updated_at')

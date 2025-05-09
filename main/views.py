@@ -11,6 +11,7 @@ def home(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
+        phone = request.POST.get('phone')
         message = request.POST.get('message')
 
 
@@ -18,6 +19,7 @@ def home(request):
             u_name = name,
             email=email,
             subject=subject,
+            phone = phone,
             message=message
         )
         return redirect('message')
